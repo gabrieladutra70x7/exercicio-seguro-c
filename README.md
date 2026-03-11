@@ -71,9 +71,9 @@ int main()
     }
 //Passeio
     else if (tipoVeiculo==1){
-    if (tipoSeguro == 1) custoCobertura = (valorBase + adicionalCat + adicionalIdade)* (-0.02);
-    else if (tipoSeguro == 2)custoCobertura = (valorBase + adicionalCat + adicionalIdade)* (0.02);
-    else custoCobertura = (valorBase + adicionalCat + adicionalIdade)* (0.10);
+    if (tipoSeguro == 1) custoCobertura =(valorBase * (-0.02));
+    else if (tipoSeguro == 2)custoCobertura = (valorBase * 0.02);
+    else custoCobertura = (valorBase * 0.10);
 
 
     }//Motos
@@ -82,21 +82,21 @@ int main()
     if (tipoVeiculo == 4){   // moto até 1000cc
 
         if(tipoSeguro == 1)
-            custoCobertura = (valorBase + adicionalCat + adicionalIdade) * (-0.05);
+            custoCobertura = (valorBase * (-0.05));
         else if (tipoSeguro == 2)
-            custoCobertura = (valorBase + adicionalCat + adicionalIdade) * (0.15);
+            custoCobertura = (valorBase  *0.15);
         else
-            custoCobertura = (valorBase + adicionalCat + adicionalIdade) * (0.80);
+            custoCobertura = (valorBase  * 0.80);
     }
 
     else if(tipoVeiculo == 5){   // moto acima de 1000cc
 
         if(tipoSeguro == 1)
-            custoCobertura = (valorBase + adicionalCat + adicionalIdade) * (0.10);
+            custoCobertura = (valorBase  * 0.10);
         else if(tipoSeguro == 2)
-            custoCobertura = (valorBase + adicionalCat + adicionalIdade) * (0.20);
+            custoCobertura = (valorBase * 0.20);
         else
-            custoCobertura = (valorBase + adicionalCat + adicionalIdade) * (1.0);
+            custoCobertura = (valorBase + adicionalCat + adicionalIdade * 1.00);
     }
     }
 
@@ -107,6 +107,13 @@ printf("\nAdicional Categoria: %.2f", adicionalCat);
 printf("\nAdicional Idade: %.2f", adicionalIdade);
 printf("\nCusto do Plano: %.2f", custoCobertura);
 printf("\nValor Total Final da Apolice: %.2f\n", valorTotal);
+
+
+
+
+
+    return 0;
+}
 
 
 
