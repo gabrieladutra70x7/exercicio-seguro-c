@@ -111,6 +111,5 @@ printf("\nValor Total Final da Apolice: %.2f\n", valorTotal);
 
 
 
-
     return 0;
 }
